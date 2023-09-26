@@ -19,6 +19,7 @@ import java.util.Scanner;
 public class CardTrick {
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
+        Card LuckyCard = new Card("Ace","Hearts");
         Random baqr = new Random();
         Scanner scanner = new Scanner(System.in);
 
