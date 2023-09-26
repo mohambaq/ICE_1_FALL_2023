@@ -20,6 +20,7 @@ public class CardTrick {
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
         Card LuckyCard = new Card("Ace","Hearts");
+        magicHand[0] = luckyCard;
         Random baqr = new Random();
         Scanner scanner = new Scanner(System.in);
 
@@ -36,21 +37,28 @@ public class CardTrick {
         String suit = scanner.next();
 
         boolean isPresent = false;
+        boolean isLuckyCard = false;
 
         for (Card card : magicHand) {
             if (card.getValue() == cardNumber && card.getSuit().equalsIgnoreCase(suit)) {
                 isPresent = true;
+            if (card.equals(LuckyCard)) {
+            isLuckyCard = true;
+        }
                 break;
             }
         }
 
         if (isPresent) {
-            System.out.println("The card is present in the magic hand.");
-        } else {
-            System.out.println("The card is not present in the magic hand.");
-        }
+    if (isLuckyCard) {
+        System.out.println("Congratulations! You picked the lucky card!");
+    } else {
+        System.out.println("The card is present in the magic hand.");
     }
+} else {
+    System.out.println("The card is not present in the magic hand.");
 }
+
 
 
     
